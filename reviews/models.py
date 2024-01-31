@@ -46,7 +46,7 @@ class BookContributor(models.Model):
 
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     contributor = models.ForeignKey(Contributor, on_delete=models.CASCADE)
-    role = models.CharField(choices=ContributionRole.choices)
+    role = models.CharField(choices=ContributionRole.choices, max_length=20)
 
 
 class Review(models.Model):
